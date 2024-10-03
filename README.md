@@ -18,7 +18,7 @@ This project is a McDonald's Order System that allows customers, VIP customers, 
 
 1. **Clone the Repository**:
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/Kx1742/se-take-home-assignment.git
    cd <your-repo-directory>
 
 2. **Install Dependencies**:
