@@ -41,3 +41,27 @@ This project is a McDonald's Order System that allows customers, VIP customers, 
 6. **Access the Application**:
    ```sh
    http://127.0.0.1:8000
+
+## Using Jobs for Order Processing
+
+### Overview
+
+The `ProcessOrderJob` is a Laravel job responsible for handling the processing of orders by bots. It ensures that orders are processed asynchronously, allowing the application to manage multiple orders concurrently without blocking the main execution thread.
+
+### Key Features
+
+- **Queueable**: The job implements the `ShouldQueue` interface, meaning it is dispatched to a queue and processed by a queue worker.
+  
+- **Timeout and Retries**: The job has a timeout of 120 seconds and will attempt to process the order up to 5 times in case of failure.
+  
+- **Order Processing**: The job simulates order processing by logging countdown messages and updating both the order and bot statuses upon successful completion.
+  
+- **Error Handling**: The job includes error handling to log any exceptions that occur during order processing. If an exception is thrown, it re-throws the error to mark the job as failed.
+
+### How It Works
+
+1. The job checks if the bot is available and in the correct status.
+2. If conditions are met, it simulates order processing by using a delay (e.g., `sleep`).
+3. Once processing is complete, it updates the order's status to `completed` and sets the bot's status to `idle`.
+4. If any issues arise, such as the bot not being in the correct state or an error during processing, the job logs the error and re-attempts based on the retry policy.
+
