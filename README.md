@@ -13,7 +13,29 @@ This project is a McDonald's Order Management System built with Laravel, designe
 4. **VIP Order Prioritization**: When a new VIP order is created, it is placed in front of all existing normal orders but behind all existing VIP orders.
 5. **Bot Removal**: When the "- Bot" button is clicked, the newest bot is destroyed. If the bot is processing an order, the order is set back to "PENDING" and ready to be processed by another bot.
 
+## Welcome Page
 
+The welcome page allows users to select their identity (Customer, VIP Customer, or Manager).
+
+![Welcome Page](welcome.page.png)
+
+## Customer Page
+
+The customer page enables normal customers to submit orders and view their order status.
+
+![Customer Page](customerpg.png)
+
+## VIP Customer Page
+
+The VIP customer page allows VIP members to submit orders, ensuring their orders are processed first.
+
+![VIP Customer Page](vippg.png)
+
+## Manager Page
+
+The manager page provides functionality to manage cooking bots and monitor order processing.
+
+![Manager Page](managerpg.png)
 
 ## How to Run the Project
 
