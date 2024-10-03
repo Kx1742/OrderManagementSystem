@@ -20,3 +20,24 @@ This project is a McDonald's Order System that allows customers, VIP customers, 
    ```sh
    git clone <your-repo-url>
    cd <your-repo-directory>
+
+2. **Install Dependencies**:
+   ```sh
+   composer install
+
+3. **Run Migrations**:
+   To set up your database schema, run the following command:
+   ```sh
+   php artisan migrate
+
+4. **Start the Server**:
+   ```sh
+   php artisan serve
+
+5. **Start the Queue Worker**:
+   ```sh
+   php artisan queue:work
+
+6. **Access the Application**:
+   ```sh
+   http://127.0.0.1:8000
