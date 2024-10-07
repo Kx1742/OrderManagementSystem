@@ -3,7 +3,7 @@
 ## Project Overview
 
 
-This project is a McDonald's Order Management System built with Laravel, designed to handle customer and VIP orders. It includes features for order creation, bot management, and automated order processing using Laravel's job queue system.
+This project is a McDonald's Order Management System built with Laravel and mySQL server, designed to handle customer and VIP orders. It includes features for order creation, bot management, and automated order processing using Laravel's job queue system.
 
 ## Key Features
 
